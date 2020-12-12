@@ -45,7 +45,7 @@ public class Airplanes {
         return passengerCapacity;
     }
 
-    public void setPassengerCapacity (String passengerCapacity ) {
+    public void setPassengerCapacity (int passengerCapacity ) {
         this.passengerCapacity = passengerCapacity;
     }
 
