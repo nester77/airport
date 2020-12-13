@@ -1,0 +1,5 @@
+package academy.belhard.entity;
+
+public enum Rank {
+TRAINING_CAPTAIN, CAPTAIN, SENIOR_FIRST_OFFICER, FIRST_OFFICER, SECOND_OFFICER, CADET
+}

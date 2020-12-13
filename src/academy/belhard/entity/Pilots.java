@@ -5,11 +5,11 @@ public class Pilots {
     private int id;
     private String first_name;
     private String last_name;
-    private String pilot_rank;
+    private Rank pilot_rank;
     private String pilot_code;
     ;
 
-    public Pilots (int id, String first_name, String last_name, String pilot_rank, String pilot_code) {
+    public Pilots (int id, String first_name, String last_name, Rank pilot_rank, String pilot_code) {
         this.id = id;
         this.first_name= first_name;
         this.last_name= last_name;
@@ -42,11 +42,11 @@ public class Pilots {
         this. last_name= last_name;
     }
 
-    public String getPilotRank () {
+    public Rank getPilotRank () {
         return pilot_rank;
     }
 
-    public void setPilotRank (String pilot_rank ) {
+    public void setPilotRank (Rank pilot_rank ) {
         this. pilot_rank = pilot_rank;
     }
 
