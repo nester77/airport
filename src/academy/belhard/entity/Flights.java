@@ -17,6 +17,14 @@ public class Flights {
         this.flight_number = flight_number;
     }
 
+    public Flights(int airplane_id, int pilot_id, String flight_date, String flight_time, String flight_number) {
+        this.airplane_id = airplane_id;
+        this.pilot_id = pilot_id;
+        this.flight_date = flight_date;
+        this.flight_time = flight_time;
+        this.flight_number = flight_number;
+    }
+
     public int getId() {
         return id;
     }

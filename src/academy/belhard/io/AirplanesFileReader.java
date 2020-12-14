@@ -25,9 +25,9 @@ public class AirplanesFileReader implements EntityFileReader {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                Airplanes address = AirplanesUtil.toObject(line);
+                Airplanes airplane = AirplanesUtil.toObject(line);
 
-                result.add(address);
+                result.add(airplane);
             }
 
         } catch (IOException e) {

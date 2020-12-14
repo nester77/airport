@@ -17,6 +17,14 @@ public class Airplanes {
 
     }
 
+    public Airplanes (String  brand, String model, int passengerCapacity, String boardNumber) {
+        this. brand = brand;
+        this.model= model;
+        this.passengerCapacity= passengerCapacity;
+        this.boardNumber= boardNumber;
+
+    }
+
     public int getId() {
         return id;
     }

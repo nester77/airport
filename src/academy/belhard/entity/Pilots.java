@@ -18,6 +18,14 @@ public class Pilots {
 
     }
 
+    public Pilots (String first_name, String last_name, Rank pilot_rank, String pilot_code) {
+        this.first_name= first_name;
+        this.last_name= last_name;
+        this.pilot_rank= pilot_rank;
+        this.pilot_code= pilot_code;
+
+    }
+
     public int getId() {
         return id;
     }

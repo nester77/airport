@@ -7,12 +7,11 @@ public class PilotsUtil {
     public static Pilots toObject(String line) {
         String[] pilotsArgs = line.split(";");
 
-        int id = Integer.parseInt(pilotsArgs[0]);
-        String first_name = pilotsArgs[1];
-        String last_name = pilotsArgs[2];
-        Rank pilot_rank = Rank.valueOf(pilotsArgs[3]);
-        String pilot_code= pilotsArgs[4];
+        String first_name = pilotsArgs[0];
+        String last_name = pilotsArgs[1];
+        Rank pilot_rank = Rank.valueOf(pilotsArgs[2]);
+        String pilot_code= pilotsArgs[3];
 
-        return new Pilots (id, first_name, last_name, pilot_rank, pilot_code);
+        return new Pilots (first_name, last_name, pilot_rank, pilot_code);
     }
 }
