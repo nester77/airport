@@ -2,7 +2,6 @@ package academy.belhard.io;
 
 import academy.belhard.entity.FullInfo;
 import academy.belhard.util.DbConnectionUtil;
-import academy.belhard.util.PrintTable;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class FullInfoDbReader {
     private static final String SELECT = "SELECT f.flight_number, f.flight_date, f.flight_time, a.board_number, CONCAT(a.brand,\" \", a.model) AS airplane, a.passenger_capacity, CONCAT(p.last_name, \" \", SUBSTRING(p.first_name,1,1), \".\") AS pilot, CONCAT(p.pilot_code, \" (\", p.pilot_rank, \")\") AS code_rank " +
-                                             "FROM flights AS f  " +
+                                             "FROM flights AS f " +
                                              "INNER JOIN airplanes AS a ON a.id = f.airplane_id " +
                                              "INNER JOIN pilots AS p ON p.id = f.pilot_id;";
 
@@ -37,9 +36,9 @@ public class FullInfoDbReader {
                 String pilotCodeRank = result.getString("code_rank");
 
 
-                FullInfo p = new FullInfo(flightNumber,flightDate,flightTime,boardNumber,airplane,passengerCapacity,pilotName,pilotCodeRank);
-                PrintTable.printRow (p);
-                res.add(p);
+                FullInfo fullInfo = new FullInfo(flightNumber,flightDate,flightTime,boardNumber,airplane,passengerCapacity,pilotName,pilotCodeRank);
+
+                res.add(fullInfo);
             }
 
 
