@@ -17,7 +17,7 @@ public class FullInfoFileWriter {
 
     public void writeAll(String nameOfFile) {
         try (FileWriter writer = new FileWriter(nameOfFile)) {
-
+            System.out.println("Результирующая таблица");
             for (FullInfo fullInfo : fullInfo) {
                 writer.write(FullInfoUtil.formatForWriting(fullInfo));
                 PrintTable.printRow (fullInfo);
