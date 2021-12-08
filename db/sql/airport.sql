@@ -23,6 +23,7 @@ PRIMARY KEY (id)
 );
 
 
+
 CREATE TABLE IF NOT EXISTS flights (
 id INT AUTO_INCREMENT,
 airplane_id INT NOT NULL,
